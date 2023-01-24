@@ -1,0 +1,15 @@
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\bin\Debug\net6.0\LINQ.Samples1.exe
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\bin\Debug\net6.0\LINQ.Samples1.deps.json
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\bin\Debug\net6.0\LINQ.Samples1.runtimeconfig.json
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\bin\Debug\net6.0\LINQ.Samples1.dll
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\bin\Debug\net6.0\LINQ.Samples1.pdb
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\obj\Debug\net6.0\LINQ.Samples1.csproj.AssemblyReference.cache
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\obj\Debug\net6.0\LINQ.Samples1.GeneratedMSBuildEditorConfig.editorconfig
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\obj\Debug\net6.0\LINQ.Samples1.AssemblyInfoInputs.cache
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\obj\Debug\net6.0\LINQ.Samples1.AssemblyInfo.cs
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\obj\Debug\net6.0\LINQ.Samples1.csproj.CoreCompileInputs.cache
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\obj\Debug\net6.0\LINQ.Samples1.dll
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\obj\Debug\net6.0\refint\LINQ.Samples1.dll
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\obj\Debug\net6.0\LINQ.Samples1.pdb
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\obj\Debug\net6.0\LINQ.Samples1.genruntimeconfig.cache
+E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\obj\Debug\net6.0\ref\LINQ.Samples1.dll
