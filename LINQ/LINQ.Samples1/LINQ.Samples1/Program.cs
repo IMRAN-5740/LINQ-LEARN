@@ -20,3 +20,8 @@ foreach (var item in methodSyntax)
 {
     Console.WriteLine(item);
 }
+
+//Mixed Syntax:
+var mixedSyntax = (from obj in list
+                   select obj).Max();
+Console.WriteLine("Max value is :" + mixedSyntax);  
