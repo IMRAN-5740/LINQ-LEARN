@@ -30,12 +30,16 @@
 
 //IEnumerable
 
+using LINQ.Samples1;
+
 List<Employee> employees = new List<Employee>()
 {
-    new Employee(){Id=1,Name="Mohammad Imran"},
-    new Employee(){Id=2,Name="Muttakin Siam"},
-     new Employee(){Id=1,Name="Mohammad Sahin"},
-    new Employee(){Id=2,Name="Muttakin Siam"}
+    new Employee(){Id=1,Name="Mohammad Shuvo", Email="shuvo@gmail.com"},
+    new Employee(){Id=2,Name="Muttakin Siam",  Email="siam@gmail.com"},
+    new Employee(){Id=3,Name="Mohammad Sahin", Email="sahin@gmail.com"},
+    new Employee(){Id=4,Name="Muttakin Sajjat",Email="sajjat@gmail.com"},
+    new Employee(){Id=5,Name="Mohammad Saidul",Email="saidul@gmail.com"},
+    new Employee(){Id=6,Name="Muttakin Symoon",Email="symoon@gmail.com"}
 };
 
 //IEnumerable<Employee> employees1 =from emp in employees
@@ -52,17 +56,53 @@ List<Employee> employees = new List<Employee>()
 
 //IQueryable
 
-IQueryable<Employee> employees2 = employees.AsQueryable().Where(x => x.Id == 1);
-foreach(var data in employees2)
-{
-    Console.WriteLine("Id :" + data.Id + " and Name :" + data.Name);
-}
+//IQueryable<Employee> employees2 = employees.AsQueryable().Where(x => x.Id == 1);
+//foreach(var data in employees2)
+//{
+//    Console.WriteLine("Id :" + data.Id + " and Name :" + data.Name);
+//}
 
 
-class Employee
+//var allEmployee= (from emp in employees
+//                 select emp).ToList();
+
+//foreach(var data in allEmployee)
+//{
+//    Console.WriteLine("Id :" + data.Id + " and Name :" + data.Name);
+//}
+
+//var propQuery=(from emp in employees
+//              select emp.Id).ToList();
+
+
+//var propMethod = employees.Select(x=>x.Id.ToString()).ToList();
+
+//foreach(var data in propMethod)
+//{
+//    Console.WriteLine("Id :"+data);
+//}
+
+
+var selectQuery = (from emp in employees
+                    select new
+                    {
+                        CustomerId=emp.Id,
+                        CustomerName = emp.Name,
+                        CustomerEmail = emp.Email
+                    }).ToList();
+
+
+var selectMethod = employees.Select(emp => new
+                    {
+                        CustomerId = emp.Id,
+                        CustomerName = emp.Name,
+                        CustomerEmail = emp.Email
+                    }).ToList();
+
+foreach (var employee in selectMethod)
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
+    Console.WriteLine(" Id:"+employee.CustomerId + " Name :"+employee.CustomerName + " Email :"+employee.CustomerEmail);
+
 }
 
 
