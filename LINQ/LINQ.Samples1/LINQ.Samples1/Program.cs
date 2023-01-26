@@ -181,14 +181,25 @@ List<Employee> employees = new List<Employee>()
 //Console.WriteLine("");
 
 
+//Where Operations
+//var dataSource = new List<int>() {1,2,3,4,5,6,7,8,9,10 };
 
-var dataSource = new List<int>() {1,2,3,4,5,6,7,8,9,10 };
+
+//var querySyntax=(from num in dataSource
+//                where num>5
+//                select num).ToList();
+
+//var methodSyntax = dataSource.Where(x => x > 5).ToList();\
 
 
-var querySyntax=(from num in dataSource
-                where num>5
-                select num).ToList();
+//OfType Operations
 
-var methodSyntax = dataSource.Where(x => x > 5).ToList();
 
-Console.WriteLine(querySyntax);
+var dataSource = new List<object>() {"Imran","Karim","Siam",1,2,3,4,5,"Shuvo"};
+
+var methodSyntax = dataSource.OfType<string>().Where(x=>x.Length>4).ToList();
+var querySyntax = (from emp in dataSource
+                  where emp is string
+                  select emp).ToList();
+                 
+Console.WriteLine();
