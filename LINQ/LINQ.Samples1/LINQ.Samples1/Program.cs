@@ -195,11 +195,30 @@ List<Employee> employees = new List<Employee>()
 //OfType Operations
 
 
-var dataSource = new List<object>() {"Imran","Karim","Siam",1,2,3,4,5,"Shuvo"};
+//var dataSource = new List<object>() {"Imran","Karim","Siam",1,2,3,4,5,"Shuvo"};
 
-var methodSyntax = dataSource.OfType<string>().Where(x=>x.Length>4).ToList();
-var querySyntax = (from emp in dataSource
-                  where emp is string
-                  select emp).ToList();
+//var methodSyntax = dataSource.OfType<string>().Where(x=>x.Length>4).ToList();
+//var querySyntax = (from emp in dataSource
+//                  where emp is string
+//                  select emp).ToList();
+
+
+//Sorting Different Types of Operation
+
+
+var dataSource = new List<int>() { 12,1,34,25,22,4 ,5,6};
+var querySyntax = (from data in dataSource
+                   where data>10
+                  orderby data
+                  select data).ToList();
+
+
+var methodSyntax=dataSource.Where(x=>x>10).OrderBy(x=>x).ToList();
+
+foreach(var data in methodSyntax)
+{
+    Console.WriteLine(data);
+}
+
                  
 Console.WriteLine();
