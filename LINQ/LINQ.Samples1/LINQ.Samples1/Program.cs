@@ -137,45 +137,58 @@ List<Employee> employees = new List<Employee>()
 
 //Console.WriteLine("");
 
-var dataSource = new List<Employee>()
-{
-    new Employee()
-        {Id=1,Name="Mohammad Imran",Email="imranbsmrstucse@gmail.com",Programming=
-            new List<Tech>
-            {
-                new Tech(){Technology=".Net"},
-                new Tech(){Technology= "SQL"},
-                new Tech(){Technology="C++"}
-            }
-        },
-    new Employee()
-        {Id=2,Name="Muttakin Siam",Email="siam@gmail.com",Programming=
-            new List<Tech>
-            {
-                new Tech(){Technology="Java"},
-                new Tech(){Technology= "C"},
-                new Tech(){Technology="C++"}
-            }
-        },
-     new Employee()
-        {Id=3,Name="Mohammad Shuvo",Email="shuvo@gmail.com",Programming=
-            new List<Tech>
-            {
-                new Tech(){Technology="MS Excell"},
-                new Tech(){Technology= "MS Word"},
-                new Tech(){Technology="MS Powerpoint"}
-            }
-        }
-
-    
-
-};
-
-var queryMethod=dataSource.SelectMany(x => x.Programming).ToList();
-
-var querySyntax = (from emp in dataSource
-                  from program in emp.Programming
-                  select program).ToList();
+//var dataSource = new List<Employee>()
+//{
+//    new Employee()
+//        {Id=1,Name="Mohammad Imran",Email="imranbsmrstucse@gmail.com",Programming=
+//            new List<Tech>
+//            {
+//                new Tech(){Technology=".Net"},
+//                new Tech(){Technology= "SQL"},
+//                new Tech(){Technology="C++"}
+//            }
+//        },
+//    new Employee()
+//        {Id=2,Name="Muttakin Siam",Email="siam@gmail.com",Programming=
+//            new List<Tech>
+//            {
+//                new Tech(){Technology="Java"},
+//                new Tech(){Technology= "C"},
+//                new Tech(){Technology="C++"}
+//            }
+//        },
+//     new Employee()
+//        {Id=3,Name="Mohammad Shuvo",Email="shuvo@gmail.com",Programming=
+//            new List<Tech>
+//            {
+//                new Tech(){Technology="MS Excell"},
+//                new Tech(){Technology= "MS Word"},
+//                new Tech(){Technology="MS Powerpoint"}
+//            }
+//        }
 
 
-Console.WriteLine("");
+
+//};
+
+//var queryMethod=dataSource.SelectMany(x => x.Programming).ToList();
+
+//var querySyntax = (from emp in dataSource
+//                  from program in emp.Programming
+//                  select program).ToList();
+
+
+//Console.WriteLine("");
+
+
+
+var dataSource = new List<int>() {1,2,3,4,5,6,7,8,9,10 };
+
+
+var querySyntax=(from num in dataSource
+                where num>5
+                select num).ToList();
+
+var methodSyntax = dataSource.Where(x => x > 5).ToList();
+
+Console.WriteLine(querySyntax);
