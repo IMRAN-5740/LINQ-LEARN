@@ -37,9 +37,9 @@ List<Employee> employees = new List<Employee>()
     new Employee(){Id=1,Name="Mohammad Shuvo", Email="shuvo@gmail.com"},
     new Employee(){Id=2,Name="Muttakin Siam",  Email="siam@gmail.com"},
     new Employee(){Id=3,Name="Mohammad Sahin", Email="sahin@gmail.com"},
-    new Employee(){Id=4,Name="Muttakin Sajjat",Email="sajjat@gmail.com"},
+    new Employee(){Id=4,Name="Mohammad Sajjat",Email="sajjat@gmail.com"},
     new Employee(){Id=5,Name="Mohammad Saidul",Email="saidul@gmail.com"},
-    new Employee(){Id=6,Name="Muttakin Symoon",Email="symoon@gmail.com"}
+    new Employee(){Id=6,Name="Mohammad Symoon",Email="symoon@gmail.com"}
 };
 
 //IEnumerable<Employee> employees1 =from emp in employees
@@ -82,29 +82,100 @@ List<Employee> employees = new List<Employee>()
 //    Console.WriteLine("Id :"+data);
 //}
 
+//Select Query and Select Method
 
-var selectQuery = (from emp in employees
-                    select new
-                    {
-                        CustomerId=emp.Id,
-                        CustomerName = emp.Name,
-                        CustomerEmail = emp.Email
-                    }).ToList();
+//var selectQuery = (from emp in employees
+//                    select new
+//                    {
+//                        CustomerId=emp.Id,
+//                        CustomerName = emp.Name,
+//                        CustomerEmail = emp.Email
+//                    }).ToList();
 
 
-var selectMethod = employees.Select(emp => new
-                    {
-                        CustomerId = emp.Id,
-                        CustomerName = emp.Name,
-                        CustomerEmail = emp.Email
-                    }).ToList();
+//var selectMethod = employees.Select(emp => new
+//                    {
+//                        CustomerId = emp.Id,
+//                        CustomerName = emp.Name,
+//                        CustomerEmail = emp.Email
+//                    }).ToList();
 
-foreach (var employee in selectMethod)
+//var selectIndex = employees.Select((emp, index)=> new { Index = index,FullName = emp.Name}).ToList();
+
+//foreach (var employee in selectMethod)
+//{
+//    Console.WriteLine(" Id:" + employee.CustomerId + " Name :" + employee.CustomerName + " Email :" + employee.CustomerEmail);
+
+//}
+
+//foreach(var data in selectIndex)
+//{
+//    Console.WriteLine(data);
+//}
+
+//SelectMany and Select 
+
+//var dataSource = new List<Employee>()
+//{
+//    new Employee(){Id=1,Name="Mohammad Imran",Email="imranbsmrstucse@gmail.com",Programming=new List<string> {"C#","C++","SQL"} },
+//    new Employee(){Id=2,Name="Muttakin Siam",Email="siam@gmail.com",Programming=new List<string> {"C++","Java","SQL"} },
+//    new Employee(){Id=3,Name="Mohammad Shuvo",Email="shuvo@gmail.com",Programming=new List<string> {"C#","SQL","Java"} }
+
+//};
+
+
+//var methodSyntax = dataSource.SelectMany(x => x.Programming).ToList();
+
+//var querySyntax=from emp in dataSource
+//                from skills in emp.Programming
+//                select skills;
+
+//foreach(var data in querySyntax)
+//{
+//    Console.WriteLine("Programming Skill: "+data);
+//}
+
+//Console.WriteLine("");
+
+var dataSource = new List<Employee>()
 {
-    Console.WriteLine(" Id:"+employee.CustomerId + " Name :"+employee.CustomerName + " Email :"+employee.CustomerEmail);
+    new Employee()
+        {Id=1,Name="Mohammad Imran",Email="imranbsmrstucse@gmail.com",Programming=
+            new List<Tech>
+            {
+                new Tech(){Technology=".Net"},
+                new Tech(){Technology= "SQL"},
+                new Tech(){Technology="C++"}
+            }
+        },
+    new Employee()
+        {Id=2,Name="Muttakin Siam",Email="siam@gmail.com",Programming=
+            new List<Tech>
+            {
+                new Tech(){Technology="Java"},
+                new Tech(){Technology= "C"},
+                new Tech(){Technology="C++"}
+            }
+        },
+     new Employee()
+        {Id=3,Name="Mohammad Shuvo",Email="shuvo@gmail.com",Programming=
+            new List<Tech>
+            {
+                new Tech(){Technology="MS Excell"},
+                new Tech(){Technology= "MS Word"},
+                new Tech(){Technology="MS Powerpoint"}
+            }
+        }
 
-}
+    
+
+};
+
+var queryMethod=dataSource.SelectMany(x => x.Programming).ToList();
+
+var querySyntax = (from emp in dataSource
+                  from program in emp.Programming
+                  select program).ToList();
 
 
-
-
+Console.WriteLine("");
