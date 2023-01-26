@@ -32,15 +32,15 @@
 
 using LINQ.Samples1;
 
-List<Employee> employees = new List<Employee>()
-{
-    new Employee(){Id=1,Name="Mohammad Shuvo", Email="shuvo@gmail.com"},
-    new Employee(){Id=2,Name="Muttakin Siam",  Email="siam@gmail.com"},
-    new Employee(){Id=3,Name="Mohammad Sahin", Email="sahin@gmail.com"},
-    new Employee(){Id=4,Name="Mohammad Sajjat",Email="sajjat@gmail.com"},
-    new Employee(){Id=5,Name="Mohammad Saidul",Email="saidul@gmail.com"},
-    new Employee(){Id=6,Name="Mohammad Symoon",Email="symoon@gmail.com"}
-};
+//List<Employee> employees = new List<Employee>()
+//{
+//    new Employee(){Id=1,Name="Mohammad Shuvo", Email="shuvo@gmail.com"},
+//    new Employee(){Id=2,Name="Muttakin Siam",  Email="siam@gmail.com"},
+//    new Employee(){Id=3,Name="Mohammad Sahin", Email="sahin@gmail.com"},
+//    new Employee(){Id=4,Name="Mohammad Sajjat",Email="sajjat@gmail.com"},
+//    new Employee(){Id=5,Name="Mohammad Saidul",Email="saidul@gmail.com"},
+//    new Employee(){Id=6,Name="Mohammad Symoon",Email="symoon@gmail.com"}
+//};
 
 //IEnumerable<Employee> employees1 =from emp in employees
 //                                  where emp.Id == 2
@@ -206,19 +206,81 @@ List<Employee> employees = new List<Employee>()
 //Sorting Different Types of Operation
 
 
-var dataSource = new List<int>() { 12,1,34,25,22,4 ,5,6};
-var querySyntax = (from data in dataSource
-                   where data>10
-                  orderby data
-                  select data).ToList();
+//var dataSource = new List<int>() { 12,1,34,25,22,4 ,5,6};
+//var querySyntax = (from data in dataSource
+//                   where data>10
+//                  orderby data
+//                  select data).ToList();
 
 
-var methodSyntax=dataSource.Where(x=>x>10).OrderBy(x=>x).ToList();
+//var methodSyntax=dataSource.Where(x=>x>10).OrderBy(x=>x).ToList();
 
-foreach(var data in methodSyntax)
+//foreach(var data in methodSyntax)
+//{
+//    Console.WriteLine(data);
+//}
+
+var dataSource = new List<Employee>()
 {
-    Console.WriteLine(data);
+    new Employee()
+    {
+        Id=1,
+        FirstName="Mohammad",
+        LastName="Imran",
+        Email="imran@gmail.com"
+    },
+     new Employee()
+    {
+        Id=2,
+        FirstName="Irfan",
+        LastName="Sajjat",
+        Email="irfan@gmail.com"
+    },
+      new Employee()
+    {
+        Id=2,
+        FirstName="Irfan",
+        LastName="mondol",
+        Email="karim@gmail.com"
+    },
+       new Employee()
+    {
+        Id=3,
+        FirstName="rohim",
+        LastName="azad",
+        Email="azad@gmail.com"
+    },
+        new Employee()
+    {
+        Id=10,
+        FirstName="sakib",
+        LastName="nakib",
+        Email="sakib@gmail.com"
+    },
+         new Employee()
+    {
+        Id=7,
+        FirstName="asif",
+        LastName="khan",
+        Email="khan@gmail.com"
+    }
+};
+
+
+var methodSyntax=dataSource.OrderBy(x => x.Id).ThenBy(x=>x.LastName).ToList();
+foreach (var method in methodSyntax)
+{
+    Console.WriteLine($"Id: {method.Id}  Name : {method.FirstName} {method.LastName} Email :{method.Email}");
 }
 
-                 
+
+var querySyntax = from data in dataSource
+                  orderby data.Id, data.LastName ascending
+                  select data;
+
+foreach (var method in querySyntax)
+{
+    Console.WriteLine($"Id: {method.Id}  Name : {method.FirstName} {method.LastName} Email :{method.Email}");
+}
+
 Console.WriteLine();
