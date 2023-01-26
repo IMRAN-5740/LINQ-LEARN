@@ -220,67 +220,95 @@ using LINQ.Samples1;
 //    Console.WriteLine(data);
 //}
 
-var dataSource = new List<Employee>()
-{
-    new Employee()
-    {
-        Id=1,
-        FirstName="Mohammad",
-        LastName="Imran",
-        Email="imran@gmail.com"
-    },
-     new Employee()
-    {
-        Id=2,
-        FirstName="Irfan",
-        LastName="Sajjat",
-        Email="irfan@gmail.com"
-    },
-      new Employee()
-    {
-        Id=2,
-        FirstName="Irfan",
-        LastName="mondol",
-        Email="karim@gmail.com"
-    },
-       new Employee()
-    {
-        Id=3,
-        FirstName="rohim",
-        LastName="azad",
-        Email="azad@gmail.com"
-    },
-        new Employee()
-    {
-        Id=10,
-        FirstName="sakib",
-        LastName="nakib",
-        Email="sakib@gmail.com"
-    },
-         new Employee()
-    {
-        Id=7,
-        FirstName="asif",
-        LastName="khan",
-        Email="khan@gmail.com"
-    }
-};
+//var dataSource = new List<Employee>()
+//{
+//    new Employee()
+//    {
+//        Id=1,
+//        FirstName="Mohammad",
+//        LastName="Imran",
+//        Email="imran@gmail.com"
+//    },
+//     new Employee()
+//    {
+//        Id=2,
+//        FirstName="Irfan",
+//        LastName="Sajjat",
+//        Email="irfan@gmail.com"
+//    },
+//      new Employee()
+//    {
+//        Id=2,
+//        FirstName="Irfan",
+//        LastName="mondol",
+//        Email="karim@gmail.com"
+//    },
+//       new Employee()
+//    {
+//        Id=3,
+//        FirstName="rohim",
+//        LastName="azad",
+//        Email="azad@gmail.com"
+//    },
+//        new Employee()
+//    {
+//        Id=10,
+//        FirstName="sakib",
+//        LastName="nakib",
+//        Email="sakib@gmail.com"
+//    },
+//         new Employee()
+//    {
+//        Id=7,
+//        FirstName="asif",
+//        LastName="khan",
+//        Email="khan@gmail.com"
+//    }
+//};
 
 
-var methodSyntax=dataSource.OrderBy(x => x.Id).ThenBy(x=>x.LastName).ToList();
-foreach (var method in methodSyntax)
+//var methodSyntax=dataSource.OrderBy(x => x.Id).ThenBy(x=>x.LastName).ToList();
+//foreach (var method in methodSyntax)
+//{
+//    Console.WriteLine($"Id: {method.Id}  Name : {method.FirstName} {method.LastName} Email :{method.Email}");
+//}
+
+
+//var querySyntax = from data in dataSource
+//                  orderby data.Id, data.LastName ascending
+//                  select data;
+
+//foreach (var method in querySyntax)
+//{
+//    Console.WriteLine($"Id: {method.Id}  Name : {method.FirstName} {method.LastName} Email :{method.Email}");
+//}
+
+
+//Reverse Method Operation
+//int[] rollNumbers = new int[] { 1,2,3,4,5,56,6,7,8};
+//var methodResult=rollNumbers.Reverse();
+
+//var queryResult=(from roll in rollNumbers
+//                select roll).Reverse();
+
+//foreach(var data in queryResult)
+//{
+//    Console.WriteLine(data);
+//}
+
+List<string> strings = new List<string>() { "Imran","Karim","Rahim","John","Abraham"};
+foreach(var data in strings)
 {
-    Console.WriteLine($"Id: {method.Id}  Name : {method.FirstName} {method.LastName} Email :{method.Email}");
+    Console.WriteLine(data);
+}
+//strings.Reverse(); use anyone
+var reversed=strings.AsEnumerable().Reverse();
+foreach (var data in reversed)
+{
+    Console.WriteLine(data);
 }
 
 
-var querySyntax = from data in dataSource
-                  orderby data.Id, data.LastName ascending
-                  select data;
 
-foreach (var method in querySyntax)
-{
-    Console.WriteLine($"Id: {method.Id}  Name : {method.FirstName} {method.LastName} Email :{method.Email}");
-}
 
 Console.WriteLine();
