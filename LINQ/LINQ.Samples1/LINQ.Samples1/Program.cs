@@ -31,6 +31,7 @@
 //IEnumerable
 
 using LINQ.Samples1;
+using System.Linq;
 
 //List<Employee> employees = new List<Employee>()
 //{
@@ -296,19 +297,86 @@ using LINQ.Samples1;
 //    Console.WriteLine(data);
 //}
 
-List<string> strings = new List<string>() { "Imran","Karim","Rahim","John","Abraham"};
-foreach(var data in strings)
-{
-    Console.WriteLine(data);
-}
-//strings.Reverse(); use anyone
-var reversed=strings.AsEnumerable().Reverse();
-foreach (var data in reversed)
-{
-    Console.WriteLine(data);
-}
+
+//Reverse Method
+
+//List<string> strings = new List<string>() { "Imran","Karim","Rahim","John","Abraham"};
+//foreach(var data in strings)
+//{
+//    Console.WriteLine(data);
+//}
+////strings.Reverse(); use anyone
+//var reversed=strings.AsEnumerable().Reverse();
+//foreach (var data in reversed)
+//{
+//    Console.WriteLine(data);
+//}
 
 
 
 
-Console.WriteLine();
+
+//Quantifier Operations
+//All
+//Any
+//Contains
+
+
+//Student[] students = { 
+//    new Student(){StudentName="Imran",Marks=80.0},
+//    new Student(){StudentName="Sajjat",Marks=90.0},
+//    new Student(){StudentName="Siam",Marks=75.0},
+//    new Student(){StudentName="Adeeb",Marks=85.0}
+
+//};
+//var methodSyntax = students.All(student=>student.Marks>70);
+
+//var queryWithMixedSyntax=(from std in students
+//                select std).All(std=>std.Marks>75);
+
+
+
+Student[] students = {
+    new Student()
+    {
+    StudentName="Imran",Marks=90,
+    Subjects=new List<Subject>()
+            {
+                new Subject(){SubjectName="Biology",SubjectMarks=75},
+                new Subject(){SubjectName="Physics",SubjectMarks=80},
+                new Subject(){SubjectName="Chemistry",SubjectMarks=86},
+                new Subject(){SubjectName="Mathematics",SubjectMarks=91}
+            }
+    },
+    new Student()
+    {
+    StudentName="Siam",Marks=80,
+    Subjects=new List<Subject>()
+            {
+                new Subject(){SubjectName="Biology",SubjectMarks=89},
+                new Subject(){SubjectName="Physics",SubjectMarks=91},
+                new Subject(){SubjectName="Chemistry",SubjectMarks=80},
+                new Subject(){SubjectName="Mathematics",SubjectMarks=91}
+            }
+    },
+    new Student()
+    {
+    StudentName="Shuvo",Marks=85,
+    Subjects=new List<Subject>()
+            {
+                new Subject(){SubjectName="Biology",SubjectMarks=78},
+                new Subject(){SubjectName="Physics",SubjectMarks=82},
+                new Subject(){SubjectName="Chemistry",SubjectMarks=68},
+                new Subject(){SubjectName="Mathematics",SubjectMarks=93}
+            }
+    }
+};
+
+
+var methodSyntax = students.Where(std => std.Subjects.All(x => x.SubjectMarks > 70)).Select(x => x).ToList();
+
+var queryWithMixedSyntax=(from std in students
+                         where std.Subjects.All(x=>x.SubjectMarks>70)
+                         select std).ToList();
+
+Console.ReadLine();

@@ -11,5 +11,7 @@ namespace LINQ.Samples1
         public int StudentId { get; set; }
         public string StudentName { get; set; }
         public string  StudentEmail { get; set; }
+        public double Marks { get; set; }
+        public List<Subject> Subjects { get; set; }
     }
 }
