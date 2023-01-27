@@ -445,24 +445,54 @@ using System.Linq;
 
 //Contains Quantifier with Example
 
+//List<Student> students = new List<Student>()
+//{
+//    new Student(){StudentId=1,StudentName="Imran"},
+//    new Student(){StudentId=2,StudentName="Sajjat"},
+//    new Student(){StudentId=3,StudentName="Motiur"},
+
+//};
+//var std = new Student() { StudentId = 1, StudentName = "Imran" };
+//students.Add(std);
+
+//var isAvailable = students.Contains(std);
+
+//var comparer = new StudentComparer();
+
+//var methodSyntax = students.Contains(new Student() { StudentId = 1, StudentName = "Imran" }, comparer);
+
+
+
+//var querySyntax = (from stk in students
+//                   select stk).Contains(new Student() { StudentId = 1, StudentName = "Imran" },comparer);
+
+
+
+//List<int> numbers = new List<int>() { 1,2,3,4,5,6,7,8,9,10,2,3,3,3,5,6,7,8,1,1,1};
+//var methodSyntax = numbers.Distinct().ToList();
+
+//var querySyntax=(from num in numbers
+//                select num).Distinct().ToList();
+//foreach(var number in querySyntax)
+//{
+//    Console.WriteLine(number);
+//}
 List<Student> students = new List<Student>()
 {
     new Student(){StudentId=1,StudentName="Imran"},
-    new Student(){StudentId=2,StudentName="Sajjat"},
-    new Student(){StudentId=3,StudentName="Motiur"},
-
+    new Student(){StudentId=2,StudentName="Siam"},
+    new Student(){StudentId=1,StudentName="Imran"},
+    new Student(){StudentId=3,StudentName="Mark"}
 };
-var std = new Student() { StudentId = 1, StudentName = "Imran" };
-students.Add(std);
-
-var isAvailable = students.Contains(std);
-
-var comparer = new StudentComparer();
-
-var methodSyntax = students.Contains(new Student() { StudentId = 1, StudentName = "Imran" }, comparer);
+//var compare = new StudentComparer();
+var methodSyntax = students.Distinct().ToList();
+var querySyntax = (from std in students
+                   select std).Distinct().ToList();
 
 
 
-var querySyntax = (from stk in students
-                   select stk).Contains(new Student() { StudentId = 1, StudentName = "Imran" },comparer);
+
+
+
+ 
 Console.ReadLine();
