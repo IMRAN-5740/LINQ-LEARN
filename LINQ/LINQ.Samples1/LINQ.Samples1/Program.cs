@@ -336,6 +336,70 @@ using System.Linq;
 
 
 
+//Student[] students = {
+//    new Student()
+//    {
+//    StudentName="Imran",Marks=90,
+//    Subjects=new List<Subject>()
+//            {
+//                new Subject(){SubjectName="Biology",SubjectMarks=75},
+//                new Subject(){SubjectName="Physics",SubjectMarks=80},
+//                new Subject(){SubjectName="Chemistry",SubjectMarks=86},
+//                new Subject(){SubjectName="Mathematics",SubjectMarks=91}
+//            }
+//    },
+//    new Student()
+//    {
+//    StudentName="Siam",Marks=80,
+//    Subjects=new List<Subject>()
+//            {
+//                new Subject(){SubjectName="Biology",SubjectMarks=89},
+//                new Subject(){SubjectName="Physics",SubjectMarks=91},
+//                new Subject(){SubjectName="Chemistry",SubjectMarks=80},
+//                new Subject(){SubjectName="Mathematics",SubjectMarks=91}
+//            }
+//    },
+//    new Student()
+//    {
+//    StudentName="Shuvo",Marks=85,
+//    Subjects=new List<Subject>()
+//            {
+//                new Subject(){SubjectName="Biology",SubjectMarks=78},
+//                new Subject(){SubjectName="Physics",SubjectMarks=82},
+//                new Subject(){SubjectName="Chemistry",SubjectMarks=68},
+//                new Subject(){SubjectName="Mathematics",SubjectMarks=93}
+//            }
+//    }
+//};
+
+
+//var methodSyntax = students.Where(std => std.Subjects.All(x => x.SubjectMarks > 70)).Select(x => x).ToList();
+
+//var queryWithMixedSyntax=(from std in students
+//                         where std.Subjects.All(x=>x.SubjectMarks>70)
+//                         select std).ToList();
+
+
+//Any
+
+//List<int> students = new List<int>() ;
+//var res = students.Any();
+
+//var dataSource = new List<Student>()
+//{
+//    new Student(){StudentName="Imran",Marks=67},
+//    new Student(){StudentName="Siam",Marks=90},
+//    new Student(){StudentName="Rahim",Marks=60},
+//    new Student(){StudentName="Karim",Marks=70},
+//    new Student(){StudentName="Sajjat",Marks=86}
+//};
+
+//var methodSyntax = dataSource.Any(x => x.Marks > 80);
+
+//var queryWithMixedSyntax = (from std in dataSource
+//                            select std).Any(x => x.Marks > 80);
+
+
 Student[] students = {
     new Student()
     {
@@ -366,17 +430,16 @@ Student[] students = {
             {
                 new Subject(){SubjectName="Biology",SubjectMarks=78},
                 new Subject(){SubjectName="Physics",SubjectMarks=82},
-                new Subject(){SubjectName="Chemistry",SubjectMarks=68},
+                new Subject(){SubjectName="Chemistry",SubjectMarks=87},
                 new Subject(){SubjectName="Mathematics",SubjectMarks=93}
             }
     }
 };
 
+var methodSyntax = students.Where(x => x.Subjects.Any(x => x.SubjectMarks > 91)).Select(x => x.Subjects.FirstOrDefault(x=>x.SubjectMarks>91)).ToList();
 
-var methodSyntax = students.Where(std => std.Subjects.All(x => x.SubjectMarks > 70)).Select(x => x).ToList();
-
-var queryWithMixedSyntax=(from std in students
-                         where std.Subjects.All(x=>x.SubjectMarks>70)
-                         select std).ToList();
+var querySyntax = (from sub in students
+                   where sub.Subjects.Any(x => x.SubjectMarks > 91)
+                   select sub.Subjects.FirstOrDefault(x => x.SubjectMarks>91)).ToList();
 
 Console.ReadLine();
