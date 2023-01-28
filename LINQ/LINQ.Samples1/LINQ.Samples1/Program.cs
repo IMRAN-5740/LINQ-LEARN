@@ -578,30 +578,64 @@ using System.Linq;
 //                   select name).Intersect(list).ToList();
 
 
-List<Student> students = new List<Student>()
-{
-    new Student(){StudentId=1,StudentName="Imran"},
-    new Student(){StudentId=2,StudentName="Siam"},
-    new Student(){StudentId=3,StudentName="Shuvo"},
-    new Student(){StudentId=4,StudentName="Zobail"},
-    new Student(){StudentId=5,StudentName="Saidul"}
-};
-List<Student> students1 = new List<Student>()
-{
-    new Student(){StudentId=1,StudentName="Imran"},
-    new Student(){StudentId=2,StudentName="Siam"},
-    new Student(){StudentId=3,StudentName="Shuvo"},
-    new Student(){StudentId=8,StudentName="Rahim"},
-    new Student(){StudentId=7,StudentName="Karim"}
-};
+//List<Student> students = new List<Student>()
+//{
+//    new Student(){StudentId=1,StudentName="Imran"},
+//    new Student(){StudentId=2,StudentName="Siam"},
+//    new Student(){StudentId=3,StudentName="Shuvo"},
+//    new Student(){StudentId=4,StudentName="Zobail"},
+//    new Student(){StudentId=5,StudentName="Saidul"}
+//};
+//List<Student> students1 = new List<Student>()
+//{
+//    new Student(){StudentId=1,StudentName="Imran"},
+//    new Student(){StudentId=2,StudentName="Siam"},
+//    new Student(){StudentId=3,StudentName="Shuvo"},
+//    new Student(){StudentId=8,StudentName="Rahim"},
+//    new Student(){StudentId=7,StudentName="Karim"}
+//};
 
-//var compare = new StudentComparer();
-var compare = new ObjcetComparer();
-var methodSyntax = students.Union(students1, compare).ToList();
-var querySyntax = (from name in students
-                   select name).Union(students1, compare).ToList();
+////var compare = new StudentComparer();
+//var compare = new ObjcetComparer();
+//var methodSyntax = students.Union(students1, compare).ToList();
+//var querySyntax = (from name in students
+//                   select name).Union(students1, compare).ToList();
 
 
-//Annonymous Way
-var comp = students.Select(x => new { x.StudentId, x.StudentName }).Union(students1.Select(x => new { x.StudentId, x.StudentName })).ToList();
+////Annonymous Way
+//var comp = students.Select(x => new { x.StudentId, x.StudentName }).Union(students1.Select(x => new { x.StudentId, x.StudentName })).ToList();
+
+
+
+
+//List<Teacher> teachers = new List<Teacher>()
+//{
+//    new Teacher(){Id=1,TeacherName="Khalilur Rahman",TeacherEmail="khalil@gmail.com"},
+//    new Teacher(){Id=2,TeacherName="Ejadul Haque",TeacherEmail="ejadul@gmail.com"},
+//    new Teacher(){Id=3,TeacherName="Mohir Uddin",TeacherEmail="mohir@gmail.com"},
+//    new Teacher(){Id=4,TeacherName="Hamidul Islam",TeacherEmail="hamidul@gmail.com"},
+//    new Teacher(){Id=5,TeacherName="Rofiqul Islam",TeacherEmail="rafiqul@gmail.com"}
+//};
+
+
+//List<Teacher> teachers1 = new List<Teacher>()
+//{
+//    new Teacher(){Id=1,TeacherName="Khalilur Rahman",TeacherEmail="khalil@gmail.com"},
+//    new Teacher(){Id=2,TeacherName="Ejadul Haque",TeacherEmail="ejadul@gmail.com"},
+//    new Teacher(){Id=3,TeacherName="Mohir Uddin",TeacherEmail="mohir@gmail.com"},
+//    new Teacher(){Id=7,TeacherName="Towfik Hasan",TeacherEmail="tawfik@gmail.com"},
+//    new Teacher(){Id=8,TeacherName="Potit Mondol",TeacherEmail="potit@gmail.com"}
+//};
+
+
+//var compare = new TeacherComparer();
+//var methodSyntax =teachers.Union(teachers1,compare).ToList();
+
+//var querySyntax = (from tea in teachers
+//                   select tea).Union(teachers1, compare).ToList();
+
+
+List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+var methodSyntax = numbers.Where(x => x > 5).Take(2).ToList();
 Console.ReadLine();
