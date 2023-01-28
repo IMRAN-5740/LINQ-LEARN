@@ -484,10 +484,10 @@ List<Student> students = new List<Student>()
     new Student(){StudentId=1,StudentName="Imran"},
     new Student(){StudentId=3,StudentName="Mark"}
 };
-//var compare = new StudentComparer();
-var methodSyntax = students.Distinct().ToList();
+var compare = new StudentComparer();
+var methodSyntax = students.Distinct(compare).ToList();
 var querySyntax = (from std in students
-                   select std).Distinct().ToList();
+                   select std).Distinct(compare).ToList();
 
 
 
