@@ -527,7 +527,46 @@ using System.Linq;
 
 
 
-//Intersec in Set Operations
+////Intersec in Set Operations
+
+
+////List<string> list = new List<string>() { "A","B","C","D","F"};
+////List<string> list1 = new List<string>() { "A", "B", "E", "F" };
+
+
+////var methodSyntax=list.Intersect(list1).ToList();
+////var querySyntax = (from name in list1
+////                   select name).Intersect(list).ToList();
+
+
+//List<Student> students = new List<Student>()
+//{
+//    new Student(){StudentId=1,StudentName="Imran"},
+//    new Student(){StudentId=2,StudentName="Siam"},
+//    new Student(){StudentId=3,StudentName="Shuvo"},
+//    new Student(){StudentId=4,StudentName="Zobail"},
+//    new Student(){StudentId=5,StudentName="Saidul"}
+//};
+//List<Student> students1 = new List<Student>()
+//{
+//    new Student(){StudentId=1,StudentName="Imran"},
+//    new Student(){StudentId=2,StudentName="Siam"},
+//    new Student(){StudentId=3,StudentName="Shuvo"},
+//    new Student(){StudentId=8,StudentName="jj"},
+//    new Student(){StudentId=7,StudentName="hkhj"}
+//};
+
+//var compare = new StudentComparer();
+//var methodSyntax = students.Intersect(students1, compare).ToList();
+//var querySyntax = (from name in students
+//                   select name).Intersect(students1, compare).ToList();
+
+
+////Annonymous Way
+////var comp = students.Select(x => new { x.StudentId, x.StudentName }).Intersect(students1.Select(x => new { x.StudentId, x.StudentName })).ToList();
+///
+
+//Union in Set Operations
 
 
 //List<string> list = new List<string>() { "A","B","C","D","F"};
@@ -552,16 +591,17 @@ List<Student> students1 = new List<Student>()
     new Student(){StudentId=1,StudentName="Imran"},
     new Student(){StudentId=2,StudentName="Siam"},
     new Student(){StudentId=3,StudentName="Shuvo"},
-    new Student(){StudentId=8,StudentName="jj"},
-    new Student(){StudentId=7,StudentName="hkhj"}
+    new Student(){StudentId=8,StudentName="Rahim"},
+    new Student(){StudentId=7,StudentName="Karim"}
 };
 
-var compare = new StudentComparer();
-var methodSyntax = students.Intersect(students1, compare).ToList();
+//var compare = new StudentComparer();
+var compare = new ObjcetComparer();
+var methodSyntax = students.Union(students1, compare).ToList();
 var querySyntax = (from name in students
-                   select name).Intersect(students1, compare).ToList();
+                   select name).Union(students1, compare).ToList();
 
 
 //Annonymous Way
-//var comp = students.Select(x => new { x.StudentId, x.StudentName }).Intersect(students1.Select(x => new { x.StudentId, x.StudentName })).ToList();
+var comp = students.Select(x => new { x.StudentId, x.StudentName }).Union(students1.Select(x => new { x.StudentId, x.StudentName })).ToList();
 Console.ReadLine();
