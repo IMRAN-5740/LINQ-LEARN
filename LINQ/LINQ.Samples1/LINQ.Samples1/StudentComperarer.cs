@@ -11,15 +11,16 @@ namespace LINQ.Samples1
     {
         public bool Equals(Student? x, Student? y)
         {
-            if (object.ReferenceEquals(x, y))
+            if (ReferenceEquals(x, y))
             {
                 return true;
             }
-            else if(object.ReferenceEquals(x, null) || object.ReferenceEquals(y,null))
+            else if(ReferenceEquals(x, null) || ReferenceEquals(y,null))
                 {
                 return false;
                 }
-            return (x.StudentId == y.StudentId) && (x.StudentName == y.StudentName);
+           // return (x.StudentId == y.StudentId) && (x.StudentName == y.StudentName);
+           return (x.StudentId.Equals(y.StudentId)) && (x.StudentName.Equals(y.StudentName));
         }
 
         public int GetHashCode([DisallowNull] Student obj)

@@ -477,22 +477,50 @@ using System.Linq;
 //{
 //    Console.WriteLine(number);
 //}
-List<Student> students = new List<Student>()
+//List<Student> students = new List<Student>()
+//{
+//    new Student(){StudentId=1,StudentName="Imran"},
+//    new Student(){StudentId=2,StudentName="Siam"},
+//    new Student(){StudentId=1,StudentName="Imran"},
+//    new Student(){StudentId=3,StudentName="Mark"}
+//};
+//var compare = new StudentComparer();
+//var methodSyntax = students.Distinct(compare).ToList();
+//var querySyntax = (from std in students
+//                   select std).Distinct(compare).ToList();
+
+
+
+
+//List<string> numbers=new List<string>() {"A","B","C","D"};
+//List<string> names=new List<string>() {"C","D","E","F"};
+
+//var res=numbers.Except(names).ToList();
+
+
+List<Student> students=new List<Student>()
 {
     new Student(){StudentId=1,StudentName="Imran"},
     new Student(){StudentId=2,StudentName="Siam"},
+    new Student(){StudentId=3,StudentName="Shuvo"},
+    new Student(){StudentId=4,StudentName="Zobail"},
+    new Student(){StudentId=5,StudentName="Saidul"},
+};
+List<Student> students1 = new List<Student>()
+{
     new Student(){StudentId=1,StudentName="Imran"},
-    new Student(){StudentId=3,StudentName="Mark"}
+    new Student(){StudentId=2,StudentName="Siam"},
+    new Student(){StudentId=3,StudentName="Shuvo"},
+    new Student(){StudentId=8,StudentName="jj"},
+    new Student(){StudentId=7,StudentName="hkhj"},
 };
 var compare = new StudentComparer();
-var methodSyntax = students.Distinct(compare).ToList();
-var querySyntax = (from std in students
-                   select std).Distinct(compare).ToList();
 
+//Comparer Way
+var methodSyntax=students.Except(students1,compare).ToList();
+var queryWithMixedSyntax = (from std in students
+                   select std).Except(students1, compare).ToList();
+//Annonymous Way
+//var compValue = students.Select(x => new { x.StudentId, x.StudentName }).Except(students1.Select(x=> new {x.StudentId,x.StudentName})).ToList();
 
-
-
-
-
- 
 Console.ReadLine();
