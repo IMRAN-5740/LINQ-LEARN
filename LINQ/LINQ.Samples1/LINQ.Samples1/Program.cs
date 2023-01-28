@@ -498,13 +498,54 @@ using System.Linq;
 //var res=numbers.Except(names).ToList();
 
 
-List<Student> students=new List<Student>()
+//Except in Set Operations
+
+//List<Student> students=new List<Student>()
+//{
+//    new Student(){StudentId=1,StudentName="Imran"},
+//    new Student(){StudentId=2,StudentName="Siam"},
+//    new Student(){StudentId=3,StudentName="Shuvo"},
+//    new Student(){StudentId=4,StudentName="Zobail"},
+//    new Student(){StudentId=5,StudentName="Saidul"},
+//};
+//List<Student> students1 = new List<Student>()
+//{
+//    new Student(){StudentId=1,StudentName="Imran"},
+//    new Student(){StudentId=2,StudentName="Siam"},
+//    new Student(){StudentId=3,StudentName="Shuvo"},
+//    new Student(){StudentId=8,StudentName="jj"},
+//    new Student(){StudentId=7,StudentName="hkhj"},
+//};
+//var compare = new StudentComparer();
+
+////Comparer Way
+//var methodSyntax=students.Except(students1,compare).ToList();
+//var queryWithMixedSyntax = (from std in students
+//                   select std).Except(students1, compare).ToList();
+//Annonymous Way
+//var compValue = students.Select(x => new { x.StudentId, x.StudentName }).Except(students1.Select(x=> new {x.StudentId,x.StudentName})).ToList();
+
+
+
+//Intersec in Set Operations
+
+
+//List<string> list = new List<string>() { "A","B","C","D","F"};
+//List<string> list1 = new List<string>() { "A", "B", "E", "F" };
+
+
+//var methodSyntax=list.Intersect(list1).ToList();
+//var querySyntax = (from name in list1
+//                   select name).Intersect(list).ToList();
+
+
+List<Student> students = new List<Student>()
 {
     new Student(){StudentId=1,StudentName="Imran"},
     new Student(){StudentId=2,StudentName="Siam"},
     new Student(){StudentId=3,StudentName="Shuvo"},
     new Student(){StudentId=4,StudentName="Zobail"},
-    new Student(){StudentId=5,StudentName="Saidul"},
+    new Student(){StudentId=5,StudentName="Saidul"}
 };
 List<Student> students1 = new List<Student>()
 {
@@ -512,15 +553,15 @@ List<Student> students1 = new List<Student>()
     new Student(){StudentId=2,StudentName="Siam"},
     new Student(){StudentId=3,StudentName="Shuvo"},
     new Student(){StudentId=8,StudentName="jj"},
-    new Student(){StudentId=7,StudentName="hkhj"},
+    new Student(){StudentId=7,StudentName="hkhj"}
 };
+
 var compare = new StudentComparer();
+var methodSyntax = students.Intersect(students1, compare).ToList();
+var querySyntax = (from name in students
+                   select name).Intersect(students1, compare).ToList();
 
-//Comparer Way
-var methodSyntax=students.Except(students1,compare).ToList();
-var queryWithMixedSyntax = (from std in students
-                   select std).Except(students1, compare).ToList();
+
 //Annonymous Way
-//var compValue = students.Select(x => new { x.StudentId, x.StudentName }).Except(students1.Select(x=> new {x.StudentId,x.StudentName})).ToList();
-
+//var comp = students.Select(x => new { x.StudentId, x.StudentName }).Intersect(students1.Select(x => new { x.StudentId, x.StudentName })).ToList();
 Console.ReadLine();

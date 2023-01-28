@@ -12,13 +12,11 @@ namespace LINQ.Samples1
         public bool Equals(Student? x, Student? y)
         {
             if (ReferenceEquals(x, y))
-            {
                 return true;
-            }
+           
             else if(ReferenceEquals(x, null) || ReferenceEquals(y,null))
-                {
                 return false;
-                }
+              
            // return (x.StudentId == y.StudentId) && (x.StudentName == y.StudentName);
            return (x.StudentId.Equals(y.StudentId)) && (x.StudentName.Equals(y.StudentName));
         }
