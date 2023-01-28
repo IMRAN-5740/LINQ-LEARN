@@ -635,7 +635,18 @@ using System.Linq;
 //                   select tea).Union(teachers1, compare).ToList();
 
 
-List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//List<int> numbers = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-var methodSyntax = numbers.Where(x => x > 5).Take(2).ToList();
+//var methodSyntax = numbers.Where(x => x > 5).Take(2).ToList();
+//var querySyntax=(from num in numbers
+//                select num).Take(2).ToList();
+
+
+
+List<int> numbers = new List<int>() { 1,6,8,2,3,5,7};
+
+var methodSyntax = numbers.TakeWhile(x => x < 7).ToList();
+var querySyntax= (from num in numbers
+                 select num).TakeWhile(x => x < 7).ToList();    
+
 Console.ReadLine();
