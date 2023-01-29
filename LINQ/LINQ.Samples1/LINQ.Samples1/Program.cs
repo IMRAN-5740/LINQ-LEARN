@@ -658,16 +658,30 @@ using System.Linq;
 
 
 //Skip Method in Partition
+//List<int> numbers = new List<int>() { 1, 6, 8, 2, 3, 5, 7 };
+
+//var methodSyntax = numbers.Where(x=>x>3).Skip(3).ToList();
+//var querySyntax = (from num in numbers
+                  
+//                   select num).Skip(2).ToList();
+
+//List<string> result = new List<string>() { "Mijan", "Kim", "John", "Ada", "Power" };
+
+//var resultSyntax = result.Skip(3).ToList();
+//var mixedSyntax = (from res in result
+//                   select res).Skip(3).ToList();
+
+
+//SkipWhile Method in Partition
 List<int> numbers = new List<int>() { 1, 6, 8, 2, 3, 5, 7 };
 
-var methodSyntax = numbers.Where(x=>x>3).Skip(3).ToList();
+var methodSyntax = numbers.SkipWhile(x=>x<7).ToList();
 var querySyntax = (from num in numbers
-                  where num > 3
-                   select num).Skip(3).ToList();
+                   select num).SkipWhile(x => x < 7).ToList();
 
-List<string> result = new List<string>() { "Mijan", "Kim", "John", "Ada", "Power" };
+List<string> names = new List<string>() { "Mijan", "Kim", "John", "Ada", "Power" };
 
-var resultSyntax = result.Skip(3).ToList();
-var mixedSyntax = (from res in result
-                   select res).Skip(3).ToList();
+var resultSyntax = names.SkipWhile((name,index)=>name.Length>index).ToList();
+var mixedSyntax = (from res in names
+                   select res).SkipWhile((name, index) => name.Length > index).ToList();
 Console.ReadLine();
