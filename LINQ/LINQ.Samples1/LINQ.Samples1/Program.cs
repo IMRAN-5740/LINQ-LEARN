@@ -642,16 +642,32 @@ using System.Linq;
 //                select num).Take(2).ToList();
 
 
+//TakeWhile Method in Partition
 
-List<int> numbers = new List<int>() { 1,6,8,2,3,5,7};
+//List<int> numbers = new List<int>() { 1,6,8,2,3,5,7};
 
-var methodSyntax = numbers.TakeWhile(x => x < 7).ToList();
-var querySyntax= (from num in numbers
-                 select num).TakeWhile(x => x < 7).ToList();
+//var methodSyntax = numbers.TakeWhile(x => x < 7).ToList();
+//var querySyntax= (from num in numbers
+//                 select num).TakeWhile(x => x < 7).ToList();
+
+//List<string> result = new List<string>() { "Mijan", "Kim", "John", "Ada", "Power" };
+
+//var resultSyntax = result.TakeWhile((name,index)=>name.Length>index).ToList();
+//var mixedSyntax = (from res in result
+//                   select res).TakeWhile((name,index)=>name.Length>index).ToList();
+
+
+//Skip Method in Partition
+List<int> numbers = new List<int>() { 1, 6, 8, 2, 3, 5, 7 };
+
+var methodSyntax = numbers.Where(x=>x>3).Skip(3).ToList();
+var querySyntax = (from num in numbers
+                  where num > 3
+                   select num).Skip(3).ToList();
 
 List<string> result = new List<string>() { "Mijan", "Kim", "John", "Ada", "Power" };
 
-var resultSyntax = result.TakeWhile((name,index)=>name.Length>index).ToList();
+var resultSyntax = result.Skip(3).ToList();
 var mixedSyntax = (from res in result
-                   select res).TakeWhile((name,index)=>name.Length>index).ToList();
+                   select res).Skip(3).ToList();
 Console.ReadLine();
