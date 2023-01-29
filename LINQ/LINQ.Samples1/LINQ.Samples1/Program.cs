@@ -647,6 +647,11 @@ List<int> numbers = new List<int>() { 1,6,8,2,3,5,7};
 
 var methodSyntax = numbers.TakeWhile(x => x < 7).ToList();
 var querySyntax= (from num in numbers
-                 select num).TakeWhile(x => x < 7).ToList();    
+                 select num).TakeWhile(x => x < 7).ToList();
 
+List<string> result = new List<string>() { "Mijan", "Kim", "John", "Ada", "Power" };
+
+var resultSyntax = result.TakeWhile((name,index)=>name.Length>index).ToList();
+var mixedSyntax = (from res in result
+                   select res).TakeWhile((name,index)=>name.Length>index).ToList();
 Console.ReadLine();
