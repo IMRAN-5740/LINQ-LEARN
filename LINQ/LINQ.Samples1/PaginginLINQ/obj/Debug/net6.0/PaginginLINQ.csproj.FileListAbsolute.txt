@@ -1,0 +1,15 @@
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\obj\Debug\net6.0\PaginginLINQ.csproj.AssemblyReference.cache
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\obj\Debug\net6.0\PaginginLINQ.GeneratedMSBuildEditorConfig.editorconfig
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\obj\Debug\net6.0\PaginginLINQ.AssemblyInfoInputs.cache
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\obj\Debug\net6.0\PaginginLINQ.AssemblyInfo.cs
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\obj\Debug\net6.0\PaginginLINQ.csproj.CoreCompileInputs.cache
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\bin\Debug\net6.0\PaginginLINQ.exe
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\bin\Debug\net6.0\PaginginLINQ.deps.json
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\bin\Debug\net6.0\PaginginLINQ.runtimeconfig.json
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\bin\Debug\net6.0\PaginginLINQ.dll
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\bin\Debug\net6.0\PaginginLINQ.pdb
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\obj\Debug\net6.0\PaginginLINQ.dll
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\obj\Debug\net6.0\refint\PaginginLINQ.dll
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\obj\Debug\net6.0\PaginginLINQ.pdb
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\obj\Debug\net6.0\PaginginLINQ.genruntimeconfig.cache
+E:\My Work\LINQ\LINQ.Samples1\PaginginLINQ\obj\Debug\net6.0\ref\PaginginLINQ.dll

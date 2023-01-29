@@ -15,4 +15,8 @@
     <None Include="E:\My Work\LINQ\LINQ.Samples1\LINQ.Samples1\.editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PaginginLINQ\PaginginLINQ.csproj" />
+  </ItemGroup>
+
 </Project>
