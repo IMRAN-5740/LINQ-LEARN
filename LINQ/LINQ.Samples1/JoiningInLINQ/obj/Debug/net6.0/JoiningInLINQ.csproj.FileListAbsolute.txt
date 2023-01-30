@@ -1,0 +1,15 @@
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\bin\Debug\net6.0\JoiningInLINQ.exe
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\bin\Debug\net6.0\JoiningInLINQ.deps.json
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\bin\Debug\net6.0\JoiningInLINQ.runtimeconfig.json
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\bin\Debug\net6.0\JoiningInLINQ.dll
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\bin\Debug\net6.0\JoiningInLINQ.pdb
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\obj\Debug\net6.0\JoiningInLINQ.csproj.AssemblyReference.cache
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\obj\Debug\net6.0\JoiningInLINQ.GeneratedMSBuildEditorConfig.editorconfig
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\obj\Debug\net6.0\JoiningInLINQ.AssemblyInfoInputs.cache
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\obj\Debug\net6.0\JoiningInLINQ.AssemblyInfo.cs
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\obj\Debug\net6.0\JoiningInLINQ.csproj.CoreCompileInputs.cache
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\obj\Debug\net6.0\JoiningInLINQ.dll
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\obj\Debug\net6.0\refint\JoiningInLINQ.dll
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\obj\Debug\net6.0\JoiningInLINQ.pdb
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\obj\Debug\net6.0\JoiningInLINQ.genruntimeconfig.cache
+E:\My Work\LINQ\LINQ.Samples1\JoiningInLINQ\obj\Debug\net6.0\ref\JoiningInLINQ.dll
