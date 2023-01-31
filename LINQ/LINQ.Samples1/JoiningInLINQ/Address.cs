@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace JoiningInLINQ
 {
-    public class Student
+    public class Address
     {
         public int Id { get; set; }
-        public string? Name { get; set; }
-        public int AddressId { get; set; }
+        public string? AddressLine { get; set; }
     }
 }
