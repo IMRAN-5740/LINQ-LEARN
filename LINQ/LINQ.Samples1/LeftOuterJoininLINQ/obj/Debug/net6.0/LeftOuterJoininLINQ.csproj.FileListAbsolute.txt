@@ -1,0 +1,15 @@
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\bin\Debug\net6.0\LeftOuterJoininLINQ.exe
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\bin\Debug\net6.0\LeftOuterJoininLINQ.deps.json
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\bin\Debug\net6.0\LeftOuterJoininLINQ.runtimeconfig.json
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\bin\Debug\net6.0\LeftOuterJoininLINQ.dll
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\bin\Debug\net6.0\LeftOuterJoininLINQ.pdb
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\obj\Debug\net6.0\LeftOuterJoininLINQ.csproj.AssemblyReference.cache
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\obj\Debug\net6.0\LeftOuterJoininLINQ.GeneratedMSBuildEditorConfig.editorconfig
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\obj\Debug\net6.0\LeftOuterJoininLINQ.AssemblyInfoInputs.cache
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\obj\Debug\net6.0\LeftOuterJoininLINQ.AssemblyInfo.cs
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\obj\Debug\net6.0\LeftOuterJoininLINQ.csproj.CoreCompileInputs.cache
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\obj\Debug\net6.0\LeftOuterJoininLINQ.dll
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\obj\Debug\net6.0\refint\LeftOuterJoininLINQ.dll
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\obj\Debug\net6.0\LeftOuterJoininLINQ.pdb
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\obj\Debug\net6.0\LeftOuterJoininLINQ.genruntimeconfig.cache
+E:\My Work\LINQ\LINQ.Samples1\LeftOuterJoininLINQ\obj\Debug\net6.0\ref\LeftOuterJoininLINQ.dll
