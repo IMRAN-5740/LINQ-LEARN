@@ -1,0 +1,15 @@
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\bin\Debug\net6.0\ElementOperationsinLINQ.exe
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\bin\Debug\net6.0\ElementOperationsinLINQ.deps.json
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\bin\Debug\net6.0\ElementOperationsinLINQ.runtimeconfig.json
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\bin\Debug\net6.0\ElementOperationsinLINQ.dll
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\bin\Debug\net6.0\ElementOperationsinLINQ.pdb
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\obj\Debug\net6.0\ElementOperationsinLINQ.csproj.AssemblyReference.cache
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\obj\Debug\net6.0\ElementOperationsinLINQ.GeneratedMSBuildEditorConfig.editorconfig
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\obj\Debug\net6.0\ElementOperationsinLINQ.AssemblyInfoInputs.cache
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\obj\Debug\net6.0\ElementOperationsinLINQ.AssemblyInfo.cs
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\obj\Debug\net6.0\ElementOperationsinLINQ.csproj.CoreCompileInputs.cache
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\obj\Debug\net6.0\ElementOperationsinLINQ.dll
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\obj\Debug\net6.0\refint\ElementOperationsinLINQ.dll
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\obj\Debug\net6.0\ElementOperationsinLINQ.pdb
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\obj\Debug\net6.0\ElementOperationsinLINQ.genruntimeconfig.cache
+E:\My Work\LINQ\LINQ.Samples1\ElementOperationsinLINQ\obj\Debug\net6.0\ref\ElementOperationsinLINQ.dll
