@@ -9,7 +9,15 @@
 
 
 
+//List<int> numbers = new List<int>() { 5, 2, 3, 4, 5, 6, 2, 78 };
+//var ms1 = numbers.Where(x => x > 5);
+//var methodSyntax = numbers.First(x => x > 5);
+ //var querySyntax = (from num in numbers
+  //                  select num).FirstOrDefault(x => x > 5);
+
 List<int> numbers = new List<int>() { 5, 2, 3, 4, 5, 6, 2, 78 };
-var ms1 = numbers.Where(x => x > 5);
-var methodSyntax = numbers.First(x => x > 5);
+var ms1 = numbers.Last();
+var methodSyntax = numbers.Last(x => x > 5);
+var querySyntax = (from num in numbers
+                   select num).LastOrDefault();
 Console.ReadLine();
